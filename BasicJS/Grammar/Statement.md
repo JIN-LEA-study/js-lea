@@ -66,3 +66,18 @@ while (식) {
   참일 때만 실행
 }
 ```
+
+## continue
+
+```js
+let i = 0;
+const MAX = 10;
+
+while (i < MAX) {
+  i++;
+  if (i % 2 === 0) {
+    continue;
+  }
+  console.log(i); // 1,3,5,7,9
+}
+```
