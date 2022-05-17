@@ -16,9 +16,10 @@ function test() {
 test();
 ```
 
-## 전역변수
+## 전역변수 (함수 스코프)
 
 ```js
+// 함수 스코프는 어디서나 접근이 가능하기 때문에 위험하다.
 var globalVal = "전역변수";
 
 function outerFunc() {
@@ -33,4 +34,24 @@ function outerFunc() {
 }
 
 outerFunc();
+```
+
+## const, let (블럭 스코프)
+
+```js
+{
+  let a = "a";
+}
+
+console.log(a); //a에 접근 불가
+```
+
+```js
+if (true) {
+  var b = "b";
+  let a = "a";
+}
+
+console.log(b); //b 어디서나 접근이 가능하기 때문에 위험하다.
+console.log(a); //a is not defined
 ```
