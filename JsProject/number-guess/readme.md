@@ -23,3 +23,14 @@
 - Math.floor() : 소수점을 버려주는 함수
 - 처음 제일 많이 하는 실수는 함수를 만들어 놓고 실행을 안함! 꼭 실행을 해주자
 - Math.floor(Math.random() \* 100) + 1 : 1부터 100까지. +1을 해주지 않으면 0부터 99까지
+- getElementByID() : document에서 어떤 아이템을 ID로 선택해오고 싶을 때
+- getElementByClassName() : 클래스 이름으로 선택
+- qeurySelecter :
+- addEventListener() : 이벤트를 더해줄 때 사용 (click, focus, mouseover 등), 두번째 인자는 이벤트가 실행했을 때 어떤 함수를 부를지 정보를 작성. 변수로써 넘길 땐 함수형으로 작성 X
+
+```js
+playButton.addEventListner("click", play); //play() X
+function play() {
+  console.log("게임시작");
+}
+```
