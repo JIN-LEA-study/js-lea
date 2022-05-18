@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>페이징</title>
     <style>
+      body {
+        /* 컬러를 자연스럽게 바뀌게 해줌 */
+        transition: background 2.5s ease-out;
+      }
       h1 {
         font-size: 50px;
         font-weight: bold;
@@ -21,9 +25,11 @@
         var prevBtn = document.querySelector(".prevBtn");
         var nextBtn = document.querySelector(".nextBtn");
         var h1 = document.getElementsByTagName("h1")[0];
+        //컬러를 배열로 넣어줌
+        var bgColorArr = ["#85FFBD", "#FFFB7D", "#E0C3FC", "#00DBDE"];
 
-        var pageNum = 0;
-        var totalNum = 6; //페이지제한
+        var totalNum = bgColorArr.length; //배경컬러길이
+        var pageNum = Math.round(Math.random() * (totalNum - 1));
 
         prevBtn.addEventListener("click", function () {
           if (pageNum > 0) {
@@ -31,23 +37,30 @@
           } else {
             pageNum = totalNum - 1;
           }
-          h1.innerHTML = pageNum + " 페이지 입니다.";
+          bgColorChange();
         });
-
         nextBtn.addEventListener("click", function () {
           if (pageNum < totalNum - 1) {
             pageNum++;
           } else {
             pageNum = 0;
           }
-          h1.innerHTML = pageNum + " 페이지 입니다.";
+          bgColorChange();
         });
+
+        function bgColorChange() {
+          h1.innerHTML = pageNum + " 페이지 입니다.";
+          document.getElementsByTagName("body")[0].style.background =
+            bgColorArr[pageNum];
+        }
+
+        bgColorChange();
       };
     </script>
   </head>
   <body>
     <button type="button" class="prevBtn">PREV</button>
     <button type="button" class="nextBtn">NEXT</button>
-    <h1>0 페이지 입니다.</h1>
+    <h1></h1>
   </body>
 </html>
