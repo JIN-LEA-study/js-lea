@@ -7,3 +7,10 @@
 //5번의 기회를 다쓰면 게임이 끝난다.(버튼이 disable)
 //유저가 1-100 범위 밖의 숫자를 입력하면 알려준다. 기회를 깍지 않는다
 //유저가 이미 입력한 숫자를 또 입력하면 알려준다. 기회를 깍지 않는다.
+
+let computerNum = 0;
+function pickRandomNum() {
+  computerNum = Math.floor(Math.random() * 100) + 1; //정수로 변환 후, 소수점을 버리기
+}
+
+pickRandomNum();
