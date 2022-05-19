@@ -9,8 +9,16 @@
 //유저가 이미 입력한 숫자를 또 입력하면 알려준다. 기회를 깍지 않는다.
 
 let computerNum = 0;
+let playButton = document.getElementById("play-button");
+
+playButton.addEventListener("click", play);
+
 function pickRandomNum() {
   computerNum = Math.floor(Math.random() * 100) + 1; //정수로 변환 후, 소수점을 버리기
+}
+
+function paly() {
+  console.log("게임시작");
 }
 
 pickRandomNum();
