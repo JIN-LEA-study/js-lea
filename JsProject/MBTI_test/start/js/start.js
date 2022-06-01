@@ -23,7 +23,7 @@ function calResult() {
 
   for (let i = 0; i < endPoint; i++) {
     let target = qnaList[i].a[select[i]];
-    for (let j = 0; j < target.lenghtl; j++) {
+    for (let j = 0; j < target.type.lenght; j++) {
       for (let k = 0; k < pointArray.length; k++) {
         if (target.type[j] === pointArray[k].name) {
           pointArray[k].value += 1;
