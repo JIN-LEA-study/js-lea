@@ -13,6 +13,7 @@ function goResult() {
       main.style.display = "none";
       qna.style.display = "block";
     }, 450);
+  });
 }
 
 function addAnswer(answerText, qIdex) {
