@@ -6,7 +6,8 @@ const endPoint = 12;
 const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 function calResult() {
-  let result = select.indexOf(Math.max(...select));
+  console.log(select);
+  var result = select.indexOf(Math.max(...select));
   return result;
 }
 
@@ -15,9 +16,9 @@ function setResult() {
   const resultName = document.querySelector(".resultname");
   resultName.innerHTML = infoList[point].name;
 
-  let resultImg = document.createElement("img");
+  var resultImg = document.createElement("img");
   const imgDiv = document.querySelector("#resultImg");
-  let imgURL = "img/image-" + point + ".png";
+  var imgURL = "img/image-" + point + ".png";
   resultImg.src = imgURL;
   resultImg.alt = point;
   resultImg.classList.add("img-fluid");
@@ -37,14 +38,13 @@ function goResult() {
       qna.style.display = "none";
       result.style.display = "block";
     }, 450);
-    setResult();
   });
-  console.log(select);
+  setResult();
 }
 
 function addAnswer(answerText, qIdx, idx) {
-  let a = document.querySelector(".answerBox");
-  let answer = document.createElement("button");
+  var a = document.querySelector(".answerBox");
+  var answer = document.createElement("button");
   answer.classList.add("answerList");
   answer.classList.add("my-3");
   answer.classList.add("py-3");
@@ -57,17 +57,18 @@ function addAnswer(answerText, qIdx, idx) {
   answer.addEventListener(
     "click",
     function () {
-      let children = document.querySelectorAll(".answerList");
+      var children = document.querySelectorAll(".answerList");
       for (let i = 0; i < children.length; i++) {
         children[i].disabled = true;
         children[i].style.WebkitAnimation = "fadeOut 0.5s";
         children[i].style.animation = "fadeOut 0.5s";
       }
       setTimeout(() => {
-        let target = qnaList[qIdx].a[idx];
-        for (let j = 0; j < target.length; i++) {
-          select[type[i]] += 1;
+        var target = qnaList[qIdx].a[idx].type;
+        for (let i = 0; i < target.length; i++) {
+          select[target[i]] += 1;
         }
+
         for (let i = 0; i < children.length; i++) {
           children[i].style.display = "none";
         }
@@ -84,7 +85,7 @@ function goNext(qIdx) {
     return;
   }
 
-  let q = document.querySelector(".qBox");
+  var q = document.querySelector(".qBox");
   q.innerHTML = qnaList[qIdx].q;
   for (let i in qnaList[qIdx].a) {
     addAnswer(qnaList[qIdx].a[i].answer, qIdx, i);
