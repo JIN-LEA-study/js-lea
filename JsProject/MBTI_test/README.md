@@ -5,13 +5,16 @@
 ### todo list
 
 - [o] feat main page
-- [o] main page styling
+- [o] style main page
 - [o] feat Q&A page
-- [o] Q&A page styling
+- [o] style Q&A page
 - [o] feat Q&A button
-- [o] Q&A button styling
+- [o] style Q&A button
 - [o] feat progressBar
 - [o] feat Result page
+- [o] style Rsult page
+- [] edit meta tag
+- [] netlify
 
 ### study note
 
