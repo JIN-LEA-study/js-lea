@@ -8,6 +8,7 @@ function addAnswer(answerText, qIdex) {
   answer.classList.add("my-3");
   answer.classList.add("py-3");
   answer.classList.add("mx-auto");
+  answer.classList.add("fadeIn");
   a.appendChild(answer);
   answer.innerHTML = answerText;
   answer.addEventListener(
@@ -16,9 +17,15 @@ function addAnswer(answerText, qIdex) {
       let children = document.querySelectorAll(".answerList");
       for (let i = 0; i < children.length; i++) {
         children[i].disabled = true;
-        children[i].style.display = "none";
+        children[i].style.WebkitAnimation = "fadeOut 0.5s";
+        children[i].style.animation = "fadeOut 0.5s";
       }
-      goNext(++qIdex);
+      setTimeout(() => {
+        for (let i = 0; i < children.length; i++) {
+          children[i].style.display = "none";
+        }
+        goNext(++qIdex);
+      }, 450);
     },
     false
   );
