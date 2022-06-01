@@ -8,3 +8,7 @@
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
 }
+
+p {
+  font-size: 20px;
+}
