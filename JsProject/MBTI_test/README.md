@@ -20,5 +20,3 @@
 
 - js: begin() 함수를 찾아서 onClick에 넣어줌
 - addEventListener() : 지정한 이벤트가 대상에 전달될 때마다 호출하는 함수
-
-### notice
