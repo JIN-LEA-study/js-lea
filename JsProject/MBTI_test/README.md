@@ -13,9 +13,9 @@
 - [o] feat progressBar
 - [o] feat Result page
 - [o] style Rsult page
-- [] edit meta tag
-- [] netlify
-- [] edit favicon
+- [o] edit meta tag
+- [o] publish netlify
+- [o] edit favicon
 
 ### study note
 
