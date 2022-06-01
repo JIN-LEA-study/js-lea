@@ -1,6 +1,19 @@
 const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
+const result = document.querySelector("#result");
 const endPoint = 12;
+
+function goResult() {
+  qna.style.WebkitAnimation = "fadeOut 1s";
+  qna.style.animation = "fadeOut 1s";
+  setTimeout(() => {
+    result.style.WebkitAnimation = "fadeIn 1s";
+    result.style.animation = "fadeIut 1s";
+    setTimeout(() => {
+      main.style.display = "none";
+      qna.style.display = "block";
+    }, 450);
+}
 
 function addAnswer(answerText, qIdex) {
   let a = document.querySelector(".answerBox");
@@ -33,6 +46,9 @@ function addAnswer(answerText, qIdex) {
 }
 
 function goNext(qIex) {
+  if (++qIdx === endPoint) {
+    goResult();
+  }
   let q = document.querySelector(".qBox");
   q.innerHTML = qnaList[qIex].q;
   for (let i in qnaList[qIex].a) {
