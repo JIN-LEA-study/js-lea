@@ -2,6 +2,17 @@
 
 막간을 이용한 Toy Proect with JavaScript
 
+### todo list
+
+- [o] feat main page
+- [o] main page styling
+- [o] feat Q&A page
+- [o] Q&A page styling
+- [o] feat Q&A button
+- [o] Q&A button styling
+- [o] feat progressBar
+- [o] feat Result page
+
 ### study note
 
 - bootstrap grid 로 반응형 웹사이트 구현이 가능
