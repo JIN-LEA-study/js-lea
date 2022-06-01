@@ -15,6 +15,7 @@
 - [o] style Rsult page
 - [] edit meta tag
 - [] netlify
+- [] edit favicon
 
 ### study note
 
