@@ -12,4 +12,6 @@
 </div>
 ```
 
+- `<script></script>`는 body 태그 끝 부분에 Import 해주는걸 권장
+
 ### notice
