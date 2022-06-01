@@ -5,6 +5,9 @@ function addAnswer(answerText, qIdex) {
   let a = document.querySelector(".answerBox");
   let answer = document.createElement("button");
   answer.classList.add("answerList");
+  answer.classList.add("my-3");
+  answer.classList.add("py-3");
+  answer.classList.add("mx-auto");
   a.appendChild(answer);
   answer.innerHTML = answerText;
   answer.addEventListener(
