@@ -15,9 +15,9 @@ function setResult() {
   const resultName = document.querySelector(".resultname");
   resultName.innerHTML = infoList[point].name;
 
-  var resultImg = document.createElement("img");
+  let resultImg = document.createElement("img");
   const imgDiv = document.querySelector("#resultImg");
-  var imgURL = "img/image-" + point + ".png";
+  let imgURL = "img/image-" + point + ".png";
   resultImg.src = imgURL;
   resultImg.alt = point;
   resultImg.classList.add("img-fluid");
@@ -37,6 +37,7 @@ function goResult() {
       qna.style.display = "none";
       result.style.display = "block";
     }, 450);
+    setResult();
   });
   console.log(select);
 }
