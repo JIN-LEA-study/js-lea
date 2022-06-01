@@ -1,18 +1,31 @@
 const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 
-function addAnswer(answerText) {
+function addAnswer(answerText, qIdex) {
   let a = document.querySelector(".answerBox");
   let answer = document.createElement("button");
+  answer.classList.add("answerList");
   a.appendChild(answer);
   answer.innerHTML = answerText;
+  answer.addEventListener(
+    "click",
+    function () {
+      let children = document.querySelectorAll(".answerList");
+      for (let i = 0; i < children.length; i++) {
+        children[i].disabled = true;
+        children[i].style.display = "none";
+      }
+      goNext(++qIdex);
+    },
+    false
+  );
 }
 
 function goNext(qIex) {
   let q = document.querySelector(".qBox");
   q.innerHTML = qnaList[qIex].q;
   for (let i in qnaList[qIex].a) {
-    addAnswer(qnaList[qIex].a[i].answer);
+    addAnswer(qnaList[qIex].a[i].answer, qIex);
   }
 }
 
