@@ -1,0 +1,23 @@
+.wrap {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.tit {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 100;
+  font-family: "NotoB";
+  font-size: 80px;
+  line-height: 1;
+}
+
+.tit span {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-color: aliceblue;
+}
