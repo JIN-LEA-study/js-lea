@@ -1,3 +1,5 @@
+# NodeJS with codingApple
+
 ## NodeJS
 
 - 서버 기본 세팅(express 라이브러리)
@@ -77,7 +79,7 @@ app.use(express.urlencoded({ extended: true }));
 const MongoClient = require("mongodb").MongoClient;
 ```
 
-### REST API
+## REST API
 
 - API(Application Programming Interface) : 서버와 클라이언트간의 소통 방법
 - HTTP 요청 시스템(GET, POST, PUT, DELETE)
