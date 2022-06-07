@@ -69,6 +69,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
 ```
 
+- DM종류 관계형(SQL언어 사용)/ NoSQL(Object자료형 입출력 가능)
+
+- MongoDB
+
+```js
+const MongoClient = require("mongodb").MongoClient;
+```
+
 ### REST API
 
 - API(Application Programming Interface) : 서버와 클라이언트간의 소통 방법
@@ -124,6 +132,7 @@ www.example.com/products/66432
 ### Version
 
 - bootstrap 4.6v
+- mongodb@3.6.4
 
 ### install
 
@@ -131,3 +140,4 @@ www.example.com/products/66432
 - npm i express
 - npm i -g nodemon
 - npm i body-parser
+- npm i mongodb
