@@ -69,17 +69,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
 ```
 
-### Version
-
-- bootstrap 4.6v
-
-### install
-
-- npm init
-- npm i express
-- npm i -g nodemon
-- npm i body-parser
-
 ### REST API
 
 - API(Application Programming Interface) : 서버와 클라이언트간의 소통 방법
@@ -129,3 +118,16 @@ www.example.com/products/66432
 - 파일확장자(.html) 쓰지말기
 - 띄어쓰기는 대시(-) 이용
 - 자료 하나당 하나의 URL
+
+## notice
+
+### Version
+
+- bootstrap 4.6v
+
+### install
+
+- npm init
+- npm i express
+- npm i -g nodemon
+- npm i body-parser
