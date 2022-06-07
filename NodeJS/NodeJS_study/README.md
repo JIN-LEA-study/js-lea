@@ -127,10 +127,10 @@ db.collection("post").find().toArray();
 - ejs 안에서 JS 사용하는 법
 
 ```ejs
-<%= for (let i = 0; i < 5; i++) {
-      <h4>할 일 제목 : <%= posts[0].제목 %></h4>
-    <p>할일 마감 날짜 : <%= posts[0].날짜 %></p>
-<%= } %>
+<% for (let i = 0; i < 5; i++) { %>
+      <h4>할 일 제목 : <% posts[0].제목 %></h4>
+    <p>할일 마감 날짜 : <% posts[0].날짜 %></p>
+<% } %>
 ```
 
 ## REST API
