@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 app.use(express.urlencoded({ extended: true }));
+app.set("view engine", "ejs"); //ejs 사용하겠음
 
 var db;
 
@@ -41,5 +42,16 @@ app.get("/write", function (req, res) {
 
 app.post("/add", function (req, res) {
   res.send("전송완료");
+  console.log(req.body.date);
   console.log(req.body.title);
+  db.collection("post").insertOne(
+    { 제목: req.body.title, 날짜: req.body.date },
+    function (req, res) {
+      console.log("저장완료");
+    }
+  );
+});
+
+app.get("/list", function (req, res) {
+  res.render("list.ejs");
 });

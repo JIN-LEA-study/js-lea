@@ -105,6 +105,12 @@ db.collection("post").insertOne(
 );
 ```
 
+- HTML 안에서 EJS 사용하는 방법
+
+```HTML
+<%= %>
+```
+
 ## REST API
 
 - API(Application Programming Interface) : 서버와 클라이언트간의 소통 방법
@@ -169,3 +175,4 @@ www.example.com/products/66432
 - npm i -g nodemon
 - npm i body-parser
 - npm i mongodb
+- npm i ejs
