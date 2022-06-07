@@ -117,7 +117,7 @@ const MongoClient = require("mongodb").MongoClient;
 6. Code on Demand
 ```
 
-### 좋은 REST API 이름짓기 원칙
+## 좋은 REST API 이름짓기 원칙
 
 ```
 www.example.com/products/66432
