@@ -8,3 +8,7 @@ app.listen(8080, function () {
 app.get("/lea", function (req, res) {
   res.send("하이, 레아입니다");
 });
+
+app.get("/", function (req, res) {
+  res.sendFile(__dirname + "/index.html");
+});

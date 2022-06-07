@@ -32,6 +32,10 @@ app.get("/lea", function (req, res) {
 });
 ```
 
+```js
+res.sendFile(__dirname + "파일경로");
+```
+
 ### install
 
 - npm init
