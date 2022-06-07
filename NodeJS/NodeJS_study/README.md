@@ -111,6 +111,28 @@ db.collection("post").insertOne(
 <%= %>
 ```
 
+- MongoDB에서 모든 데이터 가져올 때 사용하는 문법
+
+```js
+db.collection("post").find().toArray();
+```
+
+```ejs
+    <h4>할 일 제목 : <%= posts[0].제목 %></h4>
+    <p>할일 마감 날짜 : <%= posts[0].날짜 %></p>
+    <h4>할 일 제목 : <%= posts[1].제목 %></h4>
+    <p>할일 마감 날짜 : <%= posts[1].날짜 %></p>
+```
+
+- ejs 안에서 JS 사용하는 법
+
+```ejs
+<%= for (let i = 0; i < 5; i++) {
+      <h4>할 일 제목 : <%= posts[0].제목 %></h4>
+    <p>할일 마감 날짜 : <%= posts[0].날짜 %></p>
+<%= } %>
+```
+
 ## REST API
 
 - API(Application Programming Interface) : 서버와 클라이언트간의 소통 방법
