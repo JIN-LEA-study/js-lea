@@ -79,6 +79,32 @@ app.use(express.urlencoded({ extended: true }));
 const MongoClient = require("mongodb").MongoClient;
 ```
 
+- MongoDB 관련된 함수들은 전부 콜백함수에서 에러 처리가 가능
+
+```js
+// why err?
+if (err) return console.log(err);
+```
+
+```js
+var db;
+db = client.db("todoapp"); //todoapp이라는 datebase에 연결해줘
+db.collection("post").insertOne("저장할 데이터(Object)", function (에러, 결과) {
+  console.log("저장완료");
+});
+```
+
+- \_id를 넣어 id를 부여해주는 것을 권장 (id를 넣지 않으면 몽고DB가 알아서 id 강제부여)
+
+```js
+db.collection("post").insertOne(
+  { name: "LEA", age: 31, _id: 100 },
+  function (에러, 결과) {
+    console.log("저장완료");
+  }
+);
+```
+
 ## REST API
 
 - API(Application Programming Interface) : 서버와 클라이언트간의 소통 방법
