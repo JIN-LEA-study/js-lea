@@ -21,6 +21,10 @@ app.listen(8080, function () {
 - 내 컴퓨터에서 8080 포트로 접속하고 싶을 때
 
 ```js
+node sever.js
+```
+
+```js
 localhost: 8080;
 ```
 
@@ -36,7 +40,12 @@ app.get("/lea", function (req, res) {
 res.sendFile(__dirname + "파일경로");
 ```
 
+### Version
+
+- bootstrap 4.6v
+
 ### install
 
 - npm init
 - npm i express
+- npm i -g nodemon
