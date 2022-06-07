@@ -79,3 +79,53 @@ app.use(express.urlencoded({ extended: true }));
 - npm i express
 - npm i -g nodemon
 - npm i body-parser
+
+### REST API
+
+- API(Application Programming Interface) : 서버와 클라이언트간의 소통 방법
+- HTTP 요청 시스템(GET, POST, PUT, DELETE)
+- REST 원칙
+
+```
+1. Uniform interface (가장중요)
+- 하나의 자료는 하나의 URL
+- URL 하나를 알면 둘을 알 수 있어야 함
+- 요청과 응답은 정보가 충분히 들어있어야 함
+```
+
+```
+2. Client-Server 역할구분
+- 브라우저는 요청말 할 뿐
+- 서버는 응답만 할 뿐
+```
+
+```
+3. Stateless
+- 요청1, 요청2는 의존성이 없어야함
+```
+
+```
+4. Casheable
+- 서버에서 보내주는 정보들은 캐싱이 가능해야함
+- 캐싱을 위한 버전 같은 것도 관리 잘해야함
+```
+
+```
+5. Layered System
+```
+
+```
+6. Code on Demand
+```
+
+### 좋은 REST API 이름짓기 원칙
+
+```
+www.example.com/products/66432
+```
+
+- URL을 명사로 작성추천
+- 하위문서를 나타날 땐 /
+- 파일확장자(.html) 쓰지말기
+- 띄어쓰기는 대시(-) 이용
+- 자료 하나당 하나의 URL
