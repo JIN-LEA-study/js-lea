@@ -20,12 +20,12 @@ app.listen(8080, function () {
 
 - 내 컴퓨터에서 8080 포트로 접속하고 싶을 때
 
-```js
+```
 node sever.js
 ```
 
-```js
-localhost: 8080;
+```
+localhost:8080
 ```
 
 - 누군가 /lea 페이지로 방문하면, lea 관련된 안내문을 띄어주자
