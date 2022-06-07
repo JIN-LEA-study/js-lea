@@ -32,6 +32,7 @@ app.get("/lea", function (req, res) {
 });
 ```
 
-- install
+### install
+
 - npm init
 - npm i express
