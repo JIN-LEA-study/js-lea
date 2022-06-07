@@ -105,17 +105,19 @@ db.collection("post").insertOne(
 );
 ```
 
+- MongoDB에서 모든 데이터 가져올 때 사용하는 문법
+
+```js
+db.collection("post").find().toArray();
+```
+
 - HTML 안에서 EJS 사용하는 방법
 
 ```HTML
 <%= %>
 ```
 
-- MongoDB에서 모든 데이터 가져올 때 사용하는 문법
-
-```js
-db.collection("post").find().toArray();
-```
+- ejs 안에서 JS 사용하는 법 (배열)
 
 ```ejs
     <h4>할 일 제목 : <%= posts[0].제목 %></h4>
@@ -123,8 +125,6 @@ db.collection("post").find().toArray();
     <h4>할 일 제목 : <%= posts[1].제목 %></h4>
     <p>할일 마감 날짜 : <%= posts[1].날짜 %></p>
 ```
-
-- ejs 안에서 JS 사용하는 법
 
 ```ejs
 <% for (var i = 0; i < posts.length; i ++) { %>
