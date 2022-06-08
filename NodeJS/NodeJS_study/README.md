@@ -133,6 +133,11 @@ db.collection("post").find().toArray();
 <% } %>
 ```
 
+```js
+//counter라는 collection 에서 name: '게시물갯수'인 데이터 찾아주세요
+db.collection("counter").findOne({ name: "게시물갯수" });
+```
+
 ## REST API
 
 - API(Application Programming Interface) : 서버와 클라이언트간의 소통 방법

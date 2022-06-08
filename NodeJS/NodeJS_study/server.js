@@ -3,7 +3,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs"); //ejs 사용하겠음
 
-var db;
+let db;
 
 const MongoClient = require("mongodb").MongoClient;
 MongoClient.connect(
@@ -44,10 +44,17 @@ app.post("/add", function (req, res) {
   res.send("전송완료");
   console.log(req.body.date);
   console.log(req.body.title);
-  db.collection("post").insertOne(
-    { 제목: req.body.title, 날짜: req.body.date },
-    function (req, res) {
-      console.log("저장완료");
+  db.collection("counter").findOne(
+    { name: "게시물갯수" },
+    function (err, result) {
+      console.log(result.totalPost);
+      let 총게시물갯수 = result.totalPost;
+      db.collection("post").insertOne(
+        { _id: 총게시물갯수 + 1, 제목: req.body.title, 날짜: req.body.date },
+        function (req, res) {
+          console.log("저장완료");
+        }
+      );
     }
   );
 });
