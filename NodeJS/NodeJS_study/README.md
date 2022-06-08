@@ -138,6 +138,20 @@ db.collection("post").find().toArray();
 db.collection("counter").findOne({ name: "게시물갯수" });
 ```
 
+```js
+//하나의 정보를 수정하고 싶을 땐 updateOne()
+db.collection("counter").updateOne({어떤 데이터를 수정할지},{수정값},function(){});
+```
+
+- operator
+
+```js
+$set(); //변경
+$inc(); //증가(기존값에 더해줄 값)
+$min(); //기존값보다 적을 때만 변경
+$rename(); //key값 이름변경
+```
+
 ## REST API
 
 - API(Application Programming Interface) : 서버와 클라이언트간의 소통 방법
