@@ -56,9 +56,16 @@
     <ul class="list-group">
       <% for (var i = 0; i < posts.length; i ++) { %>
       <li class="list-group-item">
+        <p><%= posts[i]._id %></p>
         <h4><%= posts[i].제목 %></h4>
         <p><%= posts[i].날짜 %></p>
-        <button type="button" class="btn btn-outline-secondary">Delete</button>
+        <button
+          class="btn btn-outline-secondary delete"
+          type="button"
+          data-id="<%= posts[i]._id %>"
+        >
+          Delete
+        </button>
       </li>
       <% } %>
     </ul>
@@ -66,11 +73,14 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
     <script>
-      $.ajax({
-        method: "DELETE",
-        url: "/delete",
-        data: "게시물번호",
-      }).done(function (result) {});
+      $(".delete").click(function (e) {
+        let contentNumber = e.target.dataset.id;
+        $.ajax({
+          method: "DELETE",
+          url: "/delete",
+          data: { _id: contentNumber },
+        }).done(function (result) {});
+      });
     </script>
 
     <!-- Optional JavaScript; choose one of the two! -->

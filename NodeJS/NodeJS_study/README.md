@@ -163,6 +163,13 @@ $.ajax({
 }).done(function (결과) {});
 ```
 
+```js
+//정보를 삭제하고 싶을때 deleteOne()
+db.collection("post").deleteOne({}, function () {});
+```
+
+- e.target : 사용자가 실제로 누른 요소
+
 ## REST API
 
 - API(Application Programming Interface) : 서버와 클라이언트간의 소통 방법

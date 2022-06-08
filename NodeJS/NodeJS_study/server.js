@@ -78,4 +78,8 @@ app.get("/list", function (req, res) {
 
 app.delete("/delete", function (req, res) {
   console.log(req.body);
+  rew.body._id = perseInt(req.doby._id);
+  db.collection("post").deleteOne(req.body, function (err, result) {
+    console.log("삭제완료");
+  });
 });
