@@ -169,6 +169,7 @@ db.collection("post").deleteOne({}, function () {});
 ```
 
 - e.target : 사용자가 실제로 누른 요소
+- .parent() : ~의 부모 태그를 찾을 때
 
 ## REST API
 
