@@ -152,6 +152,17 @@ $min(); //기존값보다 적을 때만 변경
 $rename(); //key값 이름변경
 ```
 
+- AJAX는 새로고침 없이 서버와 통신이 가능
+
+```js
+//jquery를 통해 ajax 요청 코드
+$.ajax({
+  method: "DELETE",
+  url: "요청할경로",
+  data: "요청과 함께 보낼 데이터",
+}).done(function (결과) {});
+```
+
 ## REST API
 
 - API(Application Programming Interface) : 서버와 클라이언트간의 소통 방법
