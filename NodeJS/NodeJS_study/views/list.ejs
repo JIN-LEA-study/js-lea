@@ -59,11 +59,7 @@
         <p><%= posts[i]._id %></p>
         <h4><%= posts[i].제목 %></h4>
         <p><%= posts[i].날짜 %></p>
-        <button
-          class="btn btn-outline-secondary delete"
-          type="button"
-          data-id="<%= posts[i]._id %>"
-        >
+        <button class="delete" type="button" data-id="<%= posts[i]._id %>">
           Delete
         </button>
       </li>
