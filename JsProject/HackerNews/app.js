@@ -6,6 +6,8 @@ const NEWS_URL = "https://api.hnpwa.com/v0/news/1.json";
 ajax.open("GET", NEWS_URL, false);
 ajax.send();
 
+// console.log(ajax.response);
+
 const newsFeed = JSON.parse(ajax.response);
 const ul = document.createElement("ul");
 
