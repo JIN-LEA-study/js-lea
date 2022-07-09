@@ -9,6 +9,17 @@ ajax.send();
 // console.log(ajax.response);
 
 const newsFeed = JSON.parse(ajax.response);
+
+// console.log(newsFeed);
+
+document.getElementById("root").innerHTML = `
+<ul>
+  <li>${newsFeed[0].title}</li>
+  <li>${newsFeed[1].title}</li>
+  <li>${newsFeed[2].title}</li>
+</ul>
+`;
+
 const ul = document.createElement("ul");
 
 for (let i = 0; i < 10; i++) {
